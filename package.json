@@ -1,0 +1,47 @@
+{
+  "name": "project-clean-cli",
+  "version": "1.0.0",
+  "description": "Cross-platform CLI tool to scan and safely clean development project artifacts",
+  "type": "module",
+  "bin": {
+    "project-clean": "./bin/cli.js"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./scanner": "./src/scanner/index.js",
+    "./cleaner": "./src/cleaner/index.js",
+    "./config": "./src/config/index.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "node --check bin/cli.js src/**/*.js"
+  },
+  "keywords": [
+    "cli",
+    "cleanup",
+    "node-modules",
+    "devtools",
+    "project-cleanup",
+    "disk-space"
+  ],
+  "author": "Project Clean CLI",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/"
+  ],
+  "dependencies": {
+    "chalk": "^6.0.0",
+    "commander": "^15.0.0",
+    "inquirer": "^14.2.2"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.1"
+  }
+}
